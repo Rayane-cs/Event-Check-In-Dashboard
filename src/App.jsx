@@ -189,7 +189,7 @@ export default function App() {
               )}
               {!loading && rows.length === 0 && (
                 <tr id="empty-row">
-                  <td colSpan="5">No rows · unlock or adjust filters</td>
+                  <td colSpan="5">No students · unlock or adjust filters</td>
                 </tr>
               )}
               {!loading && rows.map((row) => (
