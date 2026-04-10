@@ -176,21 +176,20 @@ export default function App() {
                 <th>Speciality</th>
                 <th>Level</th>
                 <th>Feedback</th>
-                <th>Attendance date</th>
                 <th>Created at</th>
               </tr>
             </thead>
             <tbody>
               {loading && (
                 <tr id="loading-row">
-                  <td colSpan="6">
+                  <td colSpan="5">
                     <span className="shimmer"></span> Loading…
                   </td>
                 </tr>
               )}
               {!loading && rows.length === 0 && (
                 <tr id="empty-row">
-                  <td colSpan="6">No rows · unlock or adjust filters</td>
+                  <td colSpan="5">No rows · unlock or adjust filters</td>
                 </tr>
               )}
               {!loading && rows.map((row) => (
@@ -199,7 +198,6 @@ export default function App() {
                   <td>{row.speciality}</td>
                   <td className="mono">{row.level}</td>
                   <td className="feedback">{row.feedback || "—"}</td>
-                  <td className="mono">{row.attendance_date || "—"}</td>
                   <td className="mono dim">{fmtDt(row.created_at)}</td>
                 </tr>
               ))}
